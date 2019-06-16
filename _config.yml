@@ -1,8 +1,7 @@
 # Site settings
-title: Rich's Blog
+title: Rambling Richard
 email: race.richard@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  My blog for things to remember.
+description: "Read the thoughts on Tech from Richard."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://richrace.github.io" # the base hostname & protocol for your site
 twitter_username: richrace

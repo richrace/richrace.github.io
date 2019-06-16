@@ -5,14 +5,7 @@
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
+      <div class="footer-col footer-col-1">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -45,8 +38,21 @@
         </ul>
       </div>
 
-      <div class="footer-col  footer-col-3">
-        <p class="text">{{ site.description }}</p>
+      <div class="footer-col footer-col-3">
+        <ul>
+          <li>
+            <a class="page-link" href="{{ site.baseurl }}/">Home</a>
+          </li>
+          {% for page in site.pages %}
+            {% if page.title %}
+              <li>
+                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+
       </div>
     </div>
 
