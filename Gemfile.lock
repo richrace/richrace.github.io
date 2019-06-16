@@ -248,6 +248,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-autoprefixer
+  jekyll-paginate
 
 BUNDLED WITH
    1.16.2

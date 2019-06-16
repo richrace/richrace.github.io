@@ -17,4 +17,30 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a class="text" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+      {% else %}
+        <span class="text">&laquo; Prev</span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <em class="number">{{ page }}</em>
+        {% elsif page == 1 %}
+          <a class="number" href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+        {% else %}
+          <a class="number" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a class="text" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+      {% else %}
+        <span class="text">Next &raquo;</span>
+      {% endif %}
+    </div>
+  {% endif %}
 </div>

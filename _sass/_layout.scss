@@ -4,6 +4,7 @@
 .site-header {
   border-bottom: 1px solid $grey-color-light;
   min-height: $header-height;
+  background-color: white;
 
   // Positioning context for the mobile navigation icon relative
   position: fixed;
@@ -35,6 +36,20 @@
   &,
   &:visited {
     color: $grey-color-dark;
+  }
+}
+
+.pagination {
+  margin-top: 30px;
+  .number,
+  .text {
+    padding: 5px;
+  }
+  .number {
+    width: 30px;
+  }
+  .text {
+    width: 130px;
   }
 }
 
